@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fc;
+}
+
+/* Container */
+.department-container {
+  padding: 20px;
+  background-color: #f4f9fd;
+}
+
+.department {
+  /* font-style: Nunito Sans; */
+  height: 49px;
+  width: 204px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49.1px;
+  color: #0a1629;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-content-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.appmingle-media {
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+/* .department p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+} */
+
+.header-controls {
+  display: flex;
+  align-items: center;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 48px;
+  top: 20px;
+  left: 842px;
+  background: #eef3f8;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.calendar {
+  margin-right: 5px;
+}
+
+.today {
+  font-size: 14px;
+  font-weight: bold;
+}
+.profile {
+  display: flex;
+  background: #ffffff;
+}
+
+.bell-icon {
+  width: 48px;
+  height: 48px;
+  /* top: 20px; */
+  /* left: 1146px; */
+  border: 2px;
+  border-radius: 14px;
+  background: #ffffff;
+
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.bell-icon-logo {
+  width: 24px;
+  height: 24px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.profile .college-name {
+  width: 114px;
+  height: 24px;
+  top: 12px;
+  left: 54;
+  font-size: 16px;
+  line-height: 50px;
+  margin-left: 4px;
+  /* font-size: 16px; */
+  font-weight: bold;
+}
+
+/* Add Department Button */
+.add-department {
+  display: flex;
+  justify-content: end;
+  /* border: 2px solid; */
+
+  /* text-align: right; */
+  margin-bottom: 20px;
+  /* width: 239px; */
+  height: 48px;
+  border-radius: 14px;
+}
+
+.class-name-logo {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border: 2px;
+  border-radius: 13px;
+}
+
+.add-department-btn {
+  padding: 10px 20px;
+  background-color: #3f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-department-btn:hover {
+  background-color: #3342c6;
+}
+
+/* Department Card */
+.department-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.img-logo-top {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px;
+}
+
+.details {
+  font-size: 14px;
+}
+
+.name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.email {
+  margin: 0;
+  color: #8c8c8c;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-initials {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4258f1;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+  border: 1px solid;
+  max-width: 620px;
+  width: 100%;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .stat-value {
+  font-weight: bold;
+  font-size: 16px;
+} */
+
+.stat-label {
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+.status {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag {
+  background: #eef3f8;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.draft-status {
+  width: 59px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #d8f0e9;
+  color: #00d097;
+  font-size: 12px;
+  line-height: 30px;
+  padding-left: 15px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.content {
+  height: 91px;
+}
+
+.page {
+  padding: 10px;
+  background: #eef3f8;
+  border-radius: 6px;
+  color: #8c8c8c;
+  cursor: pointer;
+}
+
+.three-dot {
+  width: 44px;
+  height: 44px;
+}
+
+.three-dot-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.page.current {
+  background: #4258f1;
+  color: #ffffff;
+}
+
+.blur {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}

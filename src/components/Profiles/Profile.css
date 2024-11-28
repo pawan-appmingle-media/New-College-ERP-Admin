@@ -1,0 +1,38 @@
+#profile-main-wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, auto);
+  width: 768px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgb(139, 139, 139);
+  margin: 5px;
+  padding: 20px;
+}
+.profiles {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(143, 143, 143);
+    background-color: pink;
+  }
+  p {
+    text-align: center;
+  }
+  button {
+    display: block;
+    margin: auto;
+  }
+}
