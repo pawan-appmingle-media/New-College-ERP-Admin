@@ -1,12 +1,13 @@
-import React from "react";
-import { CiBellOn } from "react-icons/ci";
-import { FaRegCalendar } from "react-icons/fa";
+import React, { useState } from "react";
 import {
   PiDotsThreeVerticalBold,
   PiMicrosoftExcelLogoFill,
 } from "react-icons/pi";
+import AddStudent from "../AddStudent/AddStudent.jsx"; // Import your AddStudent component
 
 const AllStudentList = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const students = [
     {
       name: "Aryan Singh",
@@ -16,34 +17,19 @@ const AllStudentList = () => {
       batch: "A1",
       enrollmentNo: "BT2023001",
     },
-    {
-      name: "Priya Sharma",
-      email: "priya.sharma@gmail.com",
-      course: "MCA",
-      session: "2022-2024",
-      batch: "M2",
-      enrollmentNo: "MC2022005",
-    },
-    {
-      name: "Rajesh Kumar",
-      email: "rajesh.kumar@gmail.com",
-      course: "MBA",
-      session: "2023-2025",
-      batch: "B3",
-      enrollmentNo: "MB2023009",
-    },
-    {
-      name: "Sneha Gupta",
-      email: "sneha.gupta@gmail.com",
-      course: "BBA",
-      session: "2021-2025",
-      batch: "C1",
-      enrollmentNo: "BB2021003",
-    },
+    // Other students here...
   ];
 
   const handleAddStudent = () => {
-    console.log("Add New Student Button Clicked");
+    setIsModalOpen(true);
+    // Lock background scrolling
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    // Reset background scrolling
+    document.body.style.overflow = "auto";
   };
 
   const handleDownloadExcel = () => {
@@ -51,49 +37,24 @@ const AllStudentList = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
-      {/* Header Section */}
-      <header className="flex justify-between items-center mb-6">
-        <div>
-          <div className="text-gray-500 text-sm">
-            Powered by AppMingle Media
-          </div>
-          <h1 className="text-2xl font-bold text-gray-900">All Students</h1>
-        </div>
-
-        <div className="flex items-center space-x-6">
-          <div className="flex items-center bg-gray-100 p-2 rounded-lg">
-            <FaRegCalendar className="text-gray-500 mr-2" />
-            <span className="text-sm font-semibold">Today</span>
-          </div>
-          <div className="w-12 h-12 bg-white flex items-center justify-center rounded-lg shadow">
-            <CiBellOn className="text-gray-500 text-xl" />
-          </div>
-          <div className="flex items-center space-x-2">
-            <img
-              src="https://via.placeholder.com/40"
-              alt="College Logo"
-              className="w-10 h-10 rounded-full"
-            />
-            <span className="font-semibold text-gray-700">College Name</span>
-          </div>
-        </div>
-      </header>
-
+    <div className="bg-gray-100 min-h-screen">
       {/* Action Buttons */}
-      <div className="flex justify-end items-center mb-4">
-        <button
-          onClick={handleDownloadExcel}
-          className="bg-green-200 hover:bg-green-400 text-[03552D] px-4 py-2 rounded-lg font-medium flex items-center mr-4"
-        >
-          <PiMicrosoftExcelLogoFill /> Download Excel
-        </button>
-        <button
-          onClick={handleAddStudent}
-          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium"
-        >
-          + Add New Student
-        </button>
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">All Student</h1>
+        <div className="flex">
+          <button
+            onClick={handleDownloadExcel}
+            className="bg-green-200 hover:bg-green-400 text-[03552D] px-4 py-2 rounded-lg font-medium flex items-center mr-4"
+          >
+            <PiMicrosoftExcelLogoFill /> Download Excel
+          </button>
+          <button
+            onClick={handleAddStudent}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium"
+          >
+            + Add New Student
+          </button>
+        </div>
       </div>
 
       {/* Main Content Section */}
@@ -159,6 +120,23 @@ const AllStudentList = () => {
           </span>
         </div>
       </main>
+
+      {/* Modal for AddStudent */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="relative bg-white p-4 rounded-lg shadow-lg w-auto">
+            {/* Close Button */}
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              ✖
+            </button>
+            {/* Modal Content */}
+            <AddStudent />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

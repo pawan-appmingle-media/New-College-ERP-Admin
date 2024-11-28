@@ -1,10 +1,13 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
+import Batch from "./components/Batch/Batch.jsx";
 import CommonLayout from "./components/CommonLayout.jsx";
 import AddCourse from "./components/Course/AddCourse.jsx";
 import AllCourses from "./components/Course/AllCourses.jsx";
+import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Department from "./components/Department/Department.jsx";
 import Profiles from "./components/Profiles/Profiles.jsx";
+import Session from "./components/Session/Session.jsx";
 import AllStudentList from "./components/Student/AllStudentList/AllStudentList.jsx";
 
 function App() {
@@ -15,11 +18,13 @@ function App() {
           {/* <Route path={"/login"} element={<Login />} /> */}
           <Route element={<CommonLayout />}>
             <Route index element={<Profiles />} />
-            {/* <Route path={"/student/add-student"} element={<AddStudent />} /> */}
+            <Route path={"/dashboard"} element={<Dashboard />} />
             <Route path={"/student"} element={<AllStudentList />} />
             <Route path={"/department"} element={<Department />} />
             <Route path={"/add-course"} element={<AddCourse />} />
             <Route path={"/course"} element={<AllCourses />} />
+            <Route path={"/session"} element={<Session />} />
+            <Route path={"/batch"} element={<Batch />} />
             {/* <Route path={"/create-department"} element={<AddNewDepartment />} /> */}
           </Route>
         </Routes>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { RxCross2 } from "react-icons/rx";
 import "./AddStudent.css";
 
 const AddStudent = () => {
@@ -10,15 +9,8 @@ const AddStudent = () => {
   };
   return (
     <>
-      <div
-        id="add-student-main-wrapper"
-        className="scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100
-"
-      >
-        <div className="add-student-form p-6 relative">
-          <span className="cross-btn">
-            <RxCross2 className="absolute right-6 top-6 bg-[whitesmoke]" />
-          </span>
+      <div className="scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+        <div className="add-student-form p-6 relative w-[700px] h-[600px] overflow-y-auto">
           <h2 className="font-semibold mb-4">Add New Student</h2>
           <form>
             <div className="add-student-form-group">

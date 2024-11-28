@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Header from "./Header.jsx";
 import Sidebar from "./Sidebar.jsx";
 
 const CommonLayout = () => {
@@ -12,7 +13,10 @@ const CommonLayout = () => {
 
       {/* Main Content Section */}
       <div className="flex-1 bg-gray-100 p-6 overflow-y-auto">
-        <Outlet />
+        <div className="flex flex-col">
+          <Header></Header>
+          <Outlet />
+        </div>
       </div>
     </div>
   );

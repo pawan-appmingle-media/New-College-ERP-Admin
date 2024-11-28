@@ -8,10 +8,14 @@ import {
   FaLayerGroup,
   FaUserGraduate,
 } from "react-icons/fa";
+import { MdDashboard } from "react-icons/md";
+import SupportSVG from "./images/SupportSVG.jsx";
+
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const links = [
+    { to: "/dashboard", label: "Dashboard", icon: <MdDashboard /> },
     { to: "/student", label: "Student", icon: <FaUserGraduate /> },
     { to: "/department", label: "Department", icon: <FaBuilding /> },
     { to: "/course", label: "Course", icon: <FaBook /> },
@@ -23,11 +27,16 @@ const Sidebar = () => {
 
   return (
     <div className="h-screen w-64 bg-white shadow-md flex flex-col">
-      <div className="p-4 text-center font-bold text-xl text-gray-700 border-b">
-        Admin Panel
+      <div className="text-center font-bold text-xl text-gray-700">
+        <img
+          src={require("./images/erp-student-menu-icon.png")}
+          alt="icon"
+          width={"50px"}
+          className="ml-8 mt-8 m-4"
+        />
       </div>
       <nav className="flex-1">
-        <ul className="space-y-2 p-4">
+        <ul className="space-y-2 px-4">
           {links.map((link) => (
             <li key={link.to}>
               <NavLink
@@ -44,6 +53,7 @@ const Sidebar = () => {
             </li>
           ))}
         </ul>
+        <SupportSVG className="border" />
       </nav>
     </div>
   );

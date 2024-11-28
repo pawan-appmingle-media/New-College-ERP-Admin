@@ -1,14 +1,13 @@
 import React from "react";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
-import { useNavigate } from "react-router-dom"; 
-
+import { useNavigate } from "react-router-dom";
 
 const AllCourses = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
-    <div className="p-10 bg-gray-100 min-h-screen">
+    <div className="">
       {/* Header */}
-      <header className="flex justify-between items-center mb-5">
+      <div className="flex justify-between items-center mb-5">
         <h1 className="text-2xl font-bold">All Courses</h1>
         <button
           className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
@@ -16,7 +15,7 @@ const AllCourses = () => {
         >
           + Add New Courses
         </button>
-      </header>
+      </div>
 
       {/* Courses List */}
       <div className="space-y-4">
@@ -36,7 +35,9 @@ const AllCourses = () => {
           </div>
 
           {/* Middle Section: Course Details */}
-          <div className="flex gap-12 text-center"> {/* Increased gap */}
+          <div className="flex gap-12 text-center">
+            {" "}
+            {/* Increased gap */}
             <div>
               <div className="text-sm text-gray-500">Department</div>
               <div className="text-sm font-semibold">Name</div>
@@ -80,7 +81,9 @@ const AllCourses = () => {
               <p className="text-sm text-gray-500">Info</p>
             </div>
           </div>
-          <div className="flex gap-12 text-center"> {/* Increased gap */}
+          <div className="flex gap-12 text-center">
+            {" "}
+            {/* Increased gap */}
             <div>
               <div className="text-sm text-gray-500">Department</div>
               <div className="text-sm font-semibold">Name</div>
@@ -122,7 +125,9 @@ const AllCourses = () => {
               <p className="text-sm text-gray-500">Info</p>
             </div>
           </div>
-          <div className="flex gap-12 text-center"> {/* Increased gap */}
+          <div className="flex gap-12 text-center">
+            {" "}
+            {/* Increased gap */}
             <div>
               <div className="text-sm text-gray-500">Department</div>
               <div className="text-sm font-semibold">Name</div>
@@ -162,7 +167,9 @@ const AllCourses = () => {
               <p className="text-sm text-gray-500">Info</p>
             </div>
           </div>
-          <div className="flex gap-12 text-center"> {/* Increased gap */}
+          <div className="flex gap-12 text-center">
+            {" "}
+            {/* Increased gap */}
             <div>
               <div className="text-sm text-gray-500">Department</div>
               <div className="text-sm font-semibold">Name</div>
@@ -202,7 +209,9 @@ const AllCourses = () => {
               <p className="text-sm text-gray-500">Info</p>
             </div>
           </div>
-          <div className="flex gap-12 text-center"> {/* Increased gap */}
+          <div className="flex gap-12 text-center">
+            {" "}
+            {/* Increased gap */}
             <div>
               <div className="text-sm text-gray-500">Department</div>
               <div className="text-sm font-semibold">Name</div>
