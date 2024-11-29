@@ -9,7 +9,7 @@ import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Department from "./components/Department/Department.jsx";
 import FeeManagement from "./components/FeeManagment/FeeManagement.jsx";
 import InfoPortal from "./components/InfoPortal.jsx";
-import Profiles from "./components/Profiles/Profiles.jsx";
+import MainPage from "./components/Main/MainPage.jsx";
 import Session from "./components/Session/Session.jsx";
 import AllStudentList from "./components/Student/AllStudentList/AllStudentList.jsx";
 
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           {/* <Route path={"/login"} element={<Login />} /> */}
           <Route element={<CommonLayout />}>
-            <Route index element={<Profiles />} />
+            <Route index element={<MainPage />} />
             <Route path={"/dashboard"} element={<Dashboard />} />
             <Route path={"/student"} element={<AllStudentList />} />
             <Route path={"/department"} element={<Department />} />

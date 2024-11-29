@@ -1,23 +1,30 @@
 import React from "react";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Profiles = () => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-5 w-[768px] h-[500px] mx-auto">
-      <h2 className="text-center text-lg font-semibold mb-5">Login</h2>
+    <div className="bg-white rounded-2xl shadow-md p-5 w-[64%]">
+      <div className="flex justify-between items-center">
+        <h2 className="text-center text-lg font-semibold mb-5">Login</h2>
+        <Link className="text-blue-600 flex items-center">
+          View All <MdKeyboardArrowRight />
+        </Link>
+      </div>
       <div className="grid grid-cols-3 gap-5">
         {Array(6)
           .fill()
           .map((_, index) => (
             <div
               key={index}
-              className="bg-gray-100 rounded-lg p-5 flex flex-col items-center justify-center"
+              className="bg-[#f4f9fd] rounded-3xl p-5 flex flex-col items-center justify-center"
             >
               <img
-                src=""
+                src={require("../images/admin-pro.jpg")}
                 alt=""
-                className="w-24 h-24 rounded-full border-2 border-gray-400 bg-pink-200 mb-3"
+                className="w-24 h-24 p-1 rounded-full border-4 border-blue-400 bg-white mb-3"
               />
-              <p className="text-center text-sm font-medium">Admission</p>
+              <p className="text-center text-sm font-medium">Student</p>
               <p className="text-center text-xs text-gray-500">
                 UI/UX Designer
               </p>
