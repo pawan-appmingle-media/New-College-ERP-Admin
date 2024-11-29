@@ -7,7 +7,7 @@ const AddDepartment = ({ onClose }) => {
     onClose(); // Close popup after submission
   };
   return (
-    <div className="relative bg-white rounded-2xl">
+    <div className="relative bg-white rounded-2xl w-full">
       <h2 className="text-xl font-semibold text-center mb-6">
         Add New Department
       </h2>

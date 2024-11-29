@@ -5,59 +5,6 @@ import StudentCard from "./StudentCard";
 const Session = () => {
   const [showAddSession, setShowAddSession] = useState(false); // State to toggle AddSession component
 
-  const students = [
-    {
-      name: "Vishnu",
-      email: "Info@gmail.com",
-      gender: "Male",
-      paymentBy: "10",
-      paymentType: "10",
-      rollNumber: "12200",
-      program: "B.Tech",
-      balance: "980",
-    },
-    {
-      name: "Vishnu",
-      email: "Info@gmail.com",
-      gender: "Male",
-      paymentBy: "Vishnu",
-      paymentType: "Online",
-      rollNumber: "12200",
-      program: "B.Tech",
-      balance: "980",
-    },
-    {
-      name: "Vishnu",
-      email: "Info@gmail.com",
-      gender: "Male",
-      paymentBy: "Kumar",
-      paymentType: "Cash",
-      rollNumber: "14200",
-      program: "B.Tech",
-      balance: "980",
-    },
-    {
-      name: "Vishnu",
-      email: "Info@gmail.com",
-      gender: "Male",
-      paymentBy: "Vishnu",
-      paymentType: "UPI",
-      rollNumber: "12201",
-      program: "B.Tech",
-      balance: "980",
-    },
-    {
-      name: "Vishnu",
-      email: "Info@gmail.com",
-      gender: "Female",
-      paymentBy: "Vish",
-      paymentType: "Online",
-      rollNumber: "12300",
-      program: "B.Tech",
-      balance: "980",
-    },
-  ];
-
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Header */}
@@ -73,9 +20,7 @@ const Session = () => {
 
       {/* Student Cards */}
       <div className="space-y-4">
-        {students.map((student, index) => (
-          <StudentCard key={index} {...student} />
-        ))}
+        <StudentCard />
       </div>
 
       {/* Pagination */}
