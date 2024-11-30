@@ -1,7 +1,7 @@
 import React from "react";
-import Profiles from "../Profiles/Profiles";
-import UpcommingHoliday from "../Profiles/UpcommingHoliday";
-import StudentCard from "../Session/StudentCard.jsx";
+import Profiles from "./Profiles/Profiles.jsx";
+import StudentCard from "./Profiles/StudentCard.jsx";
+import UpcommingHoliday from "./Profiles/UpcommingHoliday.jsx";
 
 const MainPage = () => {
   return (

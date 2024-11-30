@@ -78,15 +78,17 @@ const Sidebar = () => {
           className="ml-8 mt-8 m-4"
         />
       </div>
-      <nav className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-100">
+      <nav className="flex-1 overflow-y-auto custom-scrollbar scrollbar-thumb-blue-500 scrollbar-track-gray-100">
         <ul className="space-y-2 px-4">
           {links.map((link) => (
             <li key={link.to}>
               <NavLink
                 to={link.to}
                 className={({ isActive }) =>
-                  `flex items-center gap-4 px-4 py-2 rounded-md text-gray-600 hover:bg-blue-100 hover:text-blue-600 ${
-                    isActive ? "bg-blue-500 text-white" : ""
+                  `flex items-center gap-4 px-4 py-2 rounded-md hover:bg-blue-100 hover:text-blue-600 ${
+                    isActive
+                      ? "bg-blue-100 font-semibold text-blue-600"
+                      : "text-gray-600"
                   }`
                 }
               >
@@ -99,7 +101,7 @@ const Sidebar = () => {
         <SupportSVG className="border" />
         <button
           onClick={() => setShowLogoutPopup(true)}
-          className="flex items-center gap-4 px-4 py-2 rounded-md text-gray-600 hover:bg-blue-100 hover:text-blue-600"
+          className="flex items-center gap-4 px-4 py-2 my-5 rounded-md text-gray-600 hover:bg-blue-100 hover:text-blue-600"
         >
           <span className="text-lg">
             <MdLogout />
